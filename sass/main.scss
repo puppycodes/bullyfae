@@ -15,21 +15,24 @@ $widescreen: 71.25rem; // 1140px
 
 html {
 overflow: hidden;
+max-width: 100%;
+   overflow-x: hidden;
 }
 
 body {
   background-color: black;
+  max-width: 100%;
+   overflow-x: hidden;
 }
 
 
 /* preloader */
 
 #preloader {
-    position:fixed;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
+    position: absolute;
+height: 100%;
+width: 100%;
+
     background-color:#fff; /* change if the mask should have another color then white */
     z-index:99999999999; /* makes sure it stays on top */
 }
@@ -42,19 +45,27 @@ body {
   height: 100%;
   overflow: hidden;
   width: 100%;
-  display: block;
+  opacity: 1;
+}
+
+.homelink {
+  pointer-events: all;
 }
 
 
-  @media (max-width: $tablet) {
+
+  @media (max-width: $tablet-wide) {
 
 .fullscreen {
-  display: none;
+  opacity: 0;
 }
 
+.homelink {
+  pointer-events: none;
 }
 
 
+}
 
 
 
@@ -87,7 +98,6 @@ body {
 	height: 100%;
 	width: 100%;
 }
-
 
 .logo {
   left: 50%;
