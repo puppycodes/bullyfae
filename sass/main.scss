@@ -39,6 +39,8 @@ width: 100%;
 
 .invert {
   	filter: invert(100%);
+  	-webkit-filter: invert(100%);
+  	-moz-filter: invert(100%);
 }
 
 .fullscreen {
