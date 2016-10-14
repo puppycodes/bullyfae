@@ -1,0 +1,138 @@
+html {
+  overflow: hidden;
+}
+
+body {
+  background-color: black;
+}
+
+/* preloader */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  /* change if the mask should have another color then white */
+  z-index: 99999999999;
+  /* makes sure it stays on top */
+}
+
+.invert {
+  filter: invert(100%);
+}
+
+.fullscreen {
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+  display: block;
+}
+
+@media (max-width: 40rem) {
+  .fullscreen {
+    display: none;
+  }
+}
+.video-screen {
+  display: block;
+  left: 0px;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  /* 56.25% = 16:9. set ratio */
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.video-screen .wrapper {
+  display: block;
+  height: 300%;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.video-screen iframe {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.logo {
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 30%;
+  min-width: 250px;
+  z-index: 1;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  background-color: transparent;
+}
+
+.outer {
+  background-color: transparent;
+  -webkit-animation: spin 50s linear infinite;
+  -moz-animation: spin 50s linear infinite;
+  animation: spin 50s linear infinite;
+  animation-direction: reverse;
+  -webkit-animation-direction: reverse;
+  -moz-animation-direction: reverse;
+}
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.inner {
+  width: 60%;
+  top: 20%;
+  right: 20%;
+  position: absolute;
+  background-color: transparent;
+  -webkit-animation: spin 50s linear infinite;
+  -moz-animation: spin 50s linear infinite;
+  animation: spin 50s linear infinite;
+}
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
