@@ -1,15 +1,83 @@
 html {
   overflow: hidden;
   max-width: 100%;
-  overflow-x: hidden;
-}
+  overflow-x: hidden; }
 
 body {
   background-color: black;
   max-width: 100%;
-  overflow-x: hidden;
-}
+  overflow-x: hidden; }
 
+.soundcloud .text {
+  fill: none;
+  stroke-width: 1;
+  stroke-linejoin: round;
+  stroke-dasharray: 90 460;
+  stroke-dashoffset: 0;
+  -webkit-animation: stroke 50s infinite linear;
+  animation: stroke 50s infinite linear; }
+  .soundcloud .text:nth-child(5n + 1) {
+    stroke: #fff;
+    -webkit-animation-delay: -10s;
+    animation-delay: -10s; }
+  .soundcloud .text:nth-child(5n + 2) {
+    stroke: #fff;
+    -webkit-animation-delay: -20s;
+    animation-delay: -20s; }
+  .soundcloud .text:nth-child(5n + 3) {
+    stroke: #fff;
+    -webkit-animation-delay: -30s;
+    animation-delay: -30s; }
+  .soundcloud .text:nth-child(5n + 4) {
+    stroke: #fff;
+    -webkit-animation-delay: -40s;
+    animation-delay: -40s; }
+  .soundcloud .text:nth-child(5n + 5) {
+    stroke: #fff;
+    -webkit-animation-delay: -50s;
+    animation-delay: -50s; }
+
+@-webkit-keyframes stroke {
+  100% {
+    stroke-dashoffset: -550; } }
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: -550; } }
+.bandcamp .text {
+  fill: none;
+  stroke-width: 1;
+  stroke-linejoin: round;
+  stroke-dasharray: 90 460;
+  stroke-dashoffset: 0;
+  -webkit-animation: stroke 50s infinite linear;
+  animation: stroke 50s infinite linear; }
+  .bandcamp .text:nth-child(5n + 1) {
+    stroke: #fff;
+    -webkit-animation-delay: -10s;
+    animation-delay: -10s; }
+  .bandcamp .text:nth-child(5n + 2) {
+    stroke: #fff;
+    -webkit-animation-delay: -20s;
+    animation-delay: -20s; }
+  .bandcamp .text:nth-child(5n + 3) {
+    stroke: #fff;
+    -webkit-animation-delay: -30s;
+    animation-delay: -30s; }
+  .bandcamp .text:nth-child(5n + 4) {
+    stroke: #fff;
+    -webkit-animation-delay: -40s;
+    animation-delay: -40s; }
+  .bandcamp .text:nth-child(5n + 5) {
+    stroke: #fff;
+    -webkit-animation-delay: -50s;
+    animation-delay: -50s; }
+
+@-webkit-keyframes stroke {
+  100% {
+    stroke-dashoffset: -550; } }
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: -550; } }
 /* preloader */
 #preloader {
   position: absolute;
@@ -18,35 +86,29 @@ body {
   background-color: #fff;
   /* change if the mask should have another color then white */
   z-index: 99999999999;
-  /* makes sure it stays on top */
-}
+  /* makes sure it stays on top */ }
 
 .invert {
   filter: invert(100%);
   -webkit-filter: invert(100%);
-  -moz-filter: invert(100%);
-}
+  -moz-filter: invert(100%); }
 
 .fullscreen {
   height: 100%;
   overflow: hidden;
   width: 100%;
   opacity: 1;
-}
+  pointer-events: none; }
 
 .homelink {
-  pointer-events: all;
-}
+  pointer-events: all; }
 
 @media (max-width: 48rem) {
   .fullscreen {
-    opacity: 0;
-  }
+    opacity: 0; }
 
   .homelink {
-    pointer-events: none;
-  }
-}
+    pointer-events: none; } }
 .video-screen {
   display: block;
   left: 0px;
@@ -59,8 +121,7 @@ body {
   -webkit-transform-origin: 50% 0;
   transform-origin: 50% 0;
   -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
+  transform: translateY(-50%); }
 
 .video-screen .wrapper {
   display: block;
@@ -71,14 +132,12 @@ body {
   top: 50%;
   width: 100%;
   -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
+  transform: translateY(-50%); }
 
 .video-screen iframe {
   display: block;
   height: 100%;
-  width: 100%;
-}
+  width: 100%; }
 
 .logo {
   left: 50%;
@@ -90,8 +149,7 @@ body {
   z-index: 1;
   -webkit-transform: translate3d(-50%, -50%, 0);
   transform: translate3d(-50%, -50%, 0);
-  background-color: transparent;
-}
+  background-color: transparent; }
 
 .outer {
   background-color: transparent;
@@ -100,25 +158,18 @@ body {
   animation: spin 50s linear infinite;
   animation-direction: reverse;
   -webkit-animation-direction: reverse;
-  -moz-animation-direction: reverse;
-}
+  -moz-animation-direction: reverse; }
 
 @-moz-keyframes spin {
   100% {
-    -moz-transform: rotate(360deg);
-  }
-}
+    -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin {
   100% {
-    -webkit-transform: rotate(360deg);
-  }
-}
+    -webkit-transform: rotate(360deg); } }
 @keyframes spin {
   100% {
     -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
+    transform: rotate(360deg); } }
 .inner {
   width: 60%;
   top: 20%;
@@ -127,24 +178,44 @@ body {
   background-color: transparent;
   -webkit-animation: spin 50s linear infinite;
   -moz-animation: spin 50s linear infinite;
-  animation: spin 50s linear infinite;
-}
+  animation: spin 50s linear infinite; }
 
 @-moz-keyframes spin {
   100% {
-    -moz-transform: rotate(360deg);
-  }
-}
+    -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin {
   100% {
-    -webkit-transform: rotate(360deg);
-  }
-}
+    -webkit-transform: rotate(360deg); } }
 @keyframes spin {
   100% {
     -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
+    transform: rotate(360deg); } }
+a {
+  color: white; }
+
+.soundcloud svg {
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.sound-link {
+  position: absolute;
+  width: 280px;
+  height: 63px;
+  top: 14px;
+  left: 0;
+  z-index: 10;
+  background-color: transparent;
+  text-indent: -99px; }
+
+.band-link {
+  position: absolute;
+  width: 255px;
+  height: 60px;
+  top: 84px;
+  left: 0;
+  z-index: 10;
+  background-color: transparent;
+  text-indent: -99px; }
 
 /*# sourceMappingURL=main.css.map */

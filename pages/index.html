@@ -17,7 +17,8 @@
 
 
 {% block content %}
-
+<a class="sound-link" href="https://soundcloud.com/user-418357564">soundcloud</a>
+<a class="band-link" href="https://bullyfae.bandcamp.com/releases">bandcamp</a>
 <div class="fullscreen">
   <div class="video-screen">
     <div class="wrapper">
@@ -25,5 +26,29 @@
     </div>
   </div>
 </div>
+
+<div class="soundcloud">
+
+<svg viewBox="0 0 600 50" height="150px">
+
+    <!-- Symbol -->
+    <symbol id="s-text">
+       <text class="soundcloud-text" text-anchor="left" x="5px" y="20px" >
+         soundcloud
+       </text>
+        <text class="bandcamp-text" text-anchor="right" x="5px" y="42px" >
+         bandcamp
+        </text>
+    </symbol>
+
+    <!-- Duplicate symbols -->
+    <use xlink:href="#s-text" class="text"></use>
+    <use xlink:href="#s-text" class="text"></use>
+
+
+</svg>
+</div>
+
+
 
 {% endblock %}

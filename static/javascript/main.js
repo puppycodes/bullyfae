@@ -8,7 +8,7 @@ function videoSize() {
       "-webkit-transform" : "scale("+$scale+") translateY(-50%)",
 			"transform" : "scale("+$scale+") translateY(-50%)"
 		});
-	};
+	}
 }
 
 $(window).on('load resize',function(){

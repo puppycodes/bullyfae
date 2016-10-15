@@ -1,6 +1,5 @@
 @import "susy";
 
-
 $susy: (
   columns: 12,  // The number of columns in your grid
   gutters: 1/4, // The size of a gutter in relation to a single column
@@ -13,6 +12,15 @@ $tablet-wide: 48rem; // 768px
 $desktop: 64rem; // 1024px
 $widescreen: 71.25rem; // 1140px
 
+$soundcolors: #fff, #fff, #fff, #fff, #fff;
+$soundmax: length($soundcolors);
+$sounddash: 90;
+$sounddash-gap: 20;
+$sounddash-space: $sounddash * ($soundmax - 1) + $sounddash-gap * $soundmax;
+$soundtime: 50s;
+$soundtime-step: $soundtime/$soundmax;
+
+
 html {
 overflow: hidden;
 max-width: 100%;
@@ -23,6 +31,64 @@ body {
   background-color: black;
   max-width: 100%;
    overflow-x: hidden;
+}
+
+
+
+.soundcloud .text {
+  fill: none;
+  stroke-width: 1;
+  stroke-linejoin: round;
+  stroke-dasharray: $sounddash $sounddash-space;
+  stroke-dashoffset: 0;
+  -webkit-animation: stroke $soundtime infinite linear;
+  animation: stroke $soundtime infinite linear;
+  @for $item from 1 through $soundmax {
+    &:nth-child(#{$soundmax}n + #{$item}) {
+      $color: nth($soundcolors, $item);
+      stroke: $color;
+      -webkit-animation-delay: -($soundtime-step * $item);
+      animation-delay: -($soundtime-step * $item);
+    }
+  }
+}
+@-webkit-keyframes stroke {
+  100% {
+    stroke-dashoffset: - ($sounddash + $sounddash-gap) * $soundmax;
+  }
+}
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: - ($sounddash + $sounddash-gap) * $soundmax;
+  }
+}
+
+.bandcamp .text {
+  fill: none;
+  stroke-width: 1;
+  stroke-linejoin: round;
+  stroke-dasharray: $sounddash $sounddash-space;
+  stroke-dashoffset: 0;
+  -webkit-animation: stroke $soundtime infinite linear;
+  animation: stroke $soundtime infinite linear;
+  @for $item from 1 through $soundmax {
+    &:nth-child(#{$soundmax}n + #{$item}) {
+      $color: nth($soundcolors, $item);
+      stroke: $color;
+      -webkit-animation-delay: -($soundtime-step * $item);
+      animation-delay: -($soundtime-step * $item);
+    }
+  }
+}
+@-webkit-keyframes stroke {
+  100% {
+    stroke-dashoffset: - ($sounddash + $sounddash-gap) * $soundmax;
+  }
+}
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: - ($sounddash + $sounddash-gap) * $soundmax;
+  }
 }
 
 
@@ -48,6 +114,7 @@ width: 100%;
   overflow: hidden;
   width: 100%;
   opacity: 1;
+  pointer-events: none;
 }
 
 .homelink {
@@ -144,3 +211,39 @@ position: absolute;
  @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
  @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
  @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
+ a {
+   color:white;
+ }
+
+
+.soundcloud svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.sound-link {
+
+  position: absolute;
+      width: 280px;
+      height: 63px;
+      top: 14px;
+      left: 0;
+      z-index: 10;
+      background-color: transparent;
+      text-indent: -99px;
+}
+
+.band-link {
+
+  position: absolute;
+      width: 255px;
+      height: 60px;
+      top: 84px;
+      left: 0;
+      z-index: 10;
+      background-color: transparent;
+      text-indent: -99px;
+    }
